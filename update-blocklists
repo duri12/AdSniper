@@ -1,0 +1,19 @@
+#!/bin/bash
+LISTDIR=blocklists
+
+# shellcheck disable=SC2164
+cd /home/eyal/Desktop/adblock/
+if [ ! -d $LISTDIR ]; then
+  mkdir $LISTDIR
+fi
+
+# shellcheck disable=SC2164
+cd $LISTDIR
+
+echo "* Updating blocklists in $LISTDIR"
+
+wget --no-check-certificate -N https://easylist-downloads.adblockplus.org/easylist.txt
+wget --no-check-certificate -N https://easylist-downloads.adblockplus.org/easyprivacy.txt
+wget --no-check-certificate -N https://easylist-downloads.adblockplus.org/fanboy-social.txt
+wget --no-check-certificate -N https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt
+# wget the files and put them in blacklist folder ...

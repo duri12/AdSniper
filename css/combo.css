@@ -1,0 +1,2 @@
+body{ padding: 25px;background-color: orange;color: green;transform: scaleX(-1);transform: scaleY(-1);}
+img{filter: invert(100%);transform: scaleY(-1);img{filter: blur(5px);}}

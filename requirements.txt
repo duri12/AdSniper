@@ -1,0 +1,17 @@
+adblockparser==0.7
+blinker==1.4
+cffi==1.14.5
+cryptography==3.3.2
+Cython==0.29.23
+dlib==19.22.0
+numpy==1.16.6
+olefile==0.46
+pathlib2==2.3.6
+Pillow==6.2.1
+pyasn1==0.1.9
+pycparser==2.20
+pyparsing==2.1.10
+pyre2==0.3.2
+re2==0.2.24
+urllib3==1.26.6
+

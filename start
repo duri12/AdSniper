@@ -1,0 +1,35 @@
+#!/bin/bash
+
+FLOWDIR="flows"
+PORT=8118
+
+
+echo "* Starting proxy server on port $PORT..."
+CMD=$"/home/eyal/.local/bin/mitmdump"
+
+
+if [ ! -d "$FLOWDIR" ]; then
+  echo "* creating dir for logs ..."
+  #check if there is a log dir , if not creates on
+  mkdir "$FLOWDIR"
+fi
+
+
+DATE=$(date +"%s")
+# %s - sec from epoch
+
+LOGFILE="/home/eyal/Desktop/adblock/$FLOWDIR/log-'$DATE'.flows"
+#log file
+echo "* Dumping data to $LOGFILE..."
+
+echo  "* started the proxy... "
+
+$CMD -s /home/eyal/Desktop/adblock/adblock.py -p $PORT -w "$LOGFILE"  --set stream_large_bodies=100k
+  # -s = the script
+  # -p = the port
+  # -w = the file to dump to
+  # --set stream_large_bodies to catch large data
+
+echo "* stoped the proxy... "
+
+
