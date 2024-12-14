@@ -1,6 +1,6 @@
 
-# adblocker +
-adblocker + is  An adblocker that runs as a proxy server! (And works on HTTPS connections.)
+# AdSniper
+AdSniper is  An adblocker that runs as a proxy server! (And works on HTTPS connections.)
 
 Use this to block ads on your mobile device, or just monitor its traffic and change it ..
 
